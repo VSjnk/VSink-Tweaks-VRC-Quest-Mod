@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnityEngine;
+
+namespace RemodCore_Templte.Misc
+    {
+
+
+    //We all know how to use base 64 right? if not don't worry about this if you want to know how to either dm me or ask in quest modding sev ig lol
+
+    internal class Icons
+    {
+        public static string Tab = "Misc/f_sh.png";
+
+        public static string QM_Background = "/f_sh.png";
+
+
+    }
+    //Just Converts a base64 string to a icon/Sprite lol
+
+    //for help with this use my discord sev or anyone else's
+    // https://discord.gg/CxEsC9fuW5
+
+
+    internal class Icons_For_Dummys
+    {
+
+
+
+
+        internal static Sprite CreateSprite(string base64)
+        {
+            Texture2D texture2D = new Texture2D(2, 2);
+            Rect rect = new Rect(0f, 0f, texture2D.width, texture2D.height);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            Vector4 border = Vector4.zero;
+            Sprite sprite = Sprite.CreateSprite_Injected(texture2D, ref rect, ref pivot, 100f, 0u, SpriteMeshType.Tight, ref border, generateFallbackPhysicsShape: false);
+            sprite.hideFlags |= HideFlags.DontUnloadUnusedAsset;
+            return sprite;
+        }
+        internal static Sprite CreateSprite(Texture2D texture)
+        {
+            Rect rect = new Rect(0f, 0f, texture.width, texture.height);
+            Vector2 pivot = new Vector2(0.5f, 0.5f);
+            Vector4 border = Vector4.zero;
+            Sprite sprite = Sprite.CreateSprite_Injected(texture, ref rect, ref pivot, 100f, 0u, SpriteMeshType.Tight, ref border, generateFallbackPhysicsShape: false);
+            sprite.hideFlags |= HideFlags.DontUnloadUnusedAsset;
+            return sprite;
+        }
+
+        internal static Texture2D CreateTexture(byte[] data)
+        {
+            Texture2D texture2D = new Texture2D(2, 2);
+            ImageConversion.LoadImage(texture2D, data);
+            texture2D.hideFlags |= HideFlags.DontUnloadUnusedAsset;
+            return texture2D;
+        }
+
+
+    }
+
+
+
+}
