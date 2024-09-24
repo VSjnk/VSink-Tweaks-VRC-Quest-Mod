@@ -1,5 +1,6 @@
 # VSink Tweaks
 <H1>Our client <H1>
+  <p>THIS PROJECT IS DEPRECATED UNITLL VRC QUEST MODDING RETURNS (please let me know if it comes back though!)</p>
 
 
 This is my first time making a github repository. Please don't hate me, If you want the full source code, go download the zip from releases "# VSink-Tweaks-VRC-Quest-Mod" 
